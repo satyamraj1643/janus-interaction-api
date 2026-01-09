@@ -18,7 +18,7 @@ func SetupRouter(janusBaseURL string) *chi.Mux {
 	r.Use(middleware.CORS)
 
 	// Initialize controllers
-	healthController := controllers.NewHealthController()
+	healthController := controllers.NewHealthController(janusBaseURL)
 	authController := controllers.NewAuthController()
 	submitController := controllers.NewSubmitController(janusBaseURL)
 	configController := controllers.NewConfigController()
