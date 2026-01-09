@@ -14,7 +14,7 @@ var DB *gorm.DB
 
 // ConnectDatabase initializes the database connection
 func ConnectDatabase() {
-	dsn := getEnv("DATABASE_URL", "postgresql://janus_admin:t6exln67eDs6ygXQQTkaJE2CSsBvtMtl@dpg-d571ksuuk2gs73cp2sjg-a.oregon-postgres.render.com/janus_db_03vr?sslmode=require")
+	dsn := getEnv("DATABASE_URL", "")
 
 	var err error
 	DB, err = gorm.Open(postgres.Open(dsn), &gorm.Config{
