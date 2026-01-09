@@ -14,7 +14,7 @@ type AppConfig struct {
 // LoadConfig loads configuration from environment variables
 func LoadConfig() *AppConfig {
 	return &AppConfig{
-		ServerPort:         getEnv("SERVER_PORT", "8080"),
+		ServerPort:         getEnv("SERVER_PORT", ""),
 		DatabaseURL:        getEnv("DATABASE_URL", ""),
 		JWTSecret:          getEnv("JWT_SECRET", ""),
 		JanusBaseURL:       getEnv("JANUS_BASE_URL", ""),
